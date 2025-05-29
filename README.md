@@ -23,8 +23,7 @@ This Terraform module provisions AlloyDB clusters and instances (PRIMARY, SECOND
 
 ## Architecture
 
-<img width="6000" length="8000" alt="Terraform" src="https://github.com/user-attachments/assets/84ad9af5-c004-4ef0-aba1-6dfc8d95c8d6">
-
+<img width="600" length="800" alt="Terraform" src="https://github.com/user-attachments/assets/d77a586d-ae1d-46e3-843e-b76d9c36b368">
 
 ## Providers
 
