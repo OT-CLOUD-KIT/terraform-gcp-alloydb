@@ -9,17 +9,17 @@ This Terraform module provisions AlloyDB clusters and instances (PRIMARY, SECOND
 
 ## ✅ Test Cases Verified
 
-Primary Only – Valid
+| Scenario                               | Status  | Notes                                                      |
+|----------------------------------------|---------|------------------------------------------------------------|
+| Primary Only                           | ✅ Valid | Basic setup with a single primary cluster                 |
+| Primary + Read Pool                    | ✅ Valid | Read pool created under an existing primary cluster       |
+| Read Pool without Primary              | ❌ Invalid | READ_POOL requires an existing PRIMARY instance           |
+| Primary + Secondary + Read Pool        | ✅ Valid | Complete setup with replication and read scalability      |
+| Multiple Read Pools, No Primary        | ❌ Invalid | READ_POOL requires a PRIMARY instance in the same cluster |
 
-Primary + Read Pool – Valid
 
-Read Pool without Primary – Invalid (❌ Requires PRIMARY instance)
+> ℹ️ **Note:** **`READ_POOL` instances can only be created under a cluster that already has a `PRIMARY` instance**.
 
-Primary + Secondary + Read Pool – Valid
-
-Multiple Read Pools, No Primary – Invalid (❌ Requires PRIMARY instance)
-
-ℹ️ Note: READ_POOL instances can only be created under a cluster that already has a PRIMARY instance.
 
 ## Architecture
 
